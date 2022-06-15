@@ -1,5 +1,7 @@
 import React from 'react';
+
 import PropTypes from 'prop-types';
+
 import {
   Checkbox,
   Flex,
@@ -8,6 +10,7 @@ import {
   Box,
   VisuallyHidden,
 } from '@chakra-ui/react';
+
 import { BellIcon } from '@chakra-ui/icons';
 
 export const Task = ({
