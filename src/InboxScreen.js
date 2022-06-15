@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Heading } from '@chakra-ui/react';
-import { Icon } from '@chakra-ui/react';
+
+import { Box, Heading, Icon } from '@chakra-ui/react';
+
 import { TaskList } from './components/TaskList';
 import { EmptyState } from './components/EmptyState';
 import { useTasks } from './useTasks';
