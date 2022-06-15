@@ -1,6 +1,12 @@
 import React from 'react';
+
 import { ChakraProvider } from '@chakra-ui/react';
+
+import { initialize, mswDecorator } from 'msw-storybook-addon';
+
 import { theme } from '../src/theme';
+
+initialize();
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -25,4 +31,5 @@ export const decorators = [
       <Story />
     </ChakraProvider>
   ),
+  mswDecorator,
 ];
