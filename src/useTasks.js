@@ -1,6 +1,6 @@
 import { useReducer, useEffect } from 'react';
 
-function getTasks(options) {
+async function getTasks(options) {
   return fetch('/tasks', options).then((res) => res.json());
 }
 
