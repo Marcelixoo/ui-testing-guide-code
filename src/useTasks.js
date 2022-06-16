@@ -28,7 +28,7 @@ export const reducer = (tasks, action) => {
 };
 
 export function useTasks() {
-  const [tasks, dispatch] = useReducer(reducer, []);
+  const [tasks, dispatch] = useReducer(reducer, { loading: true });
 
   useEffect(() => {
     const abortController = new AbortController();

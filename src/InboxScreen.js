@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Box, Heading, Icon } from '@chakra-ui/react';
+import { Box, Flex, Heading, Icon, Spinner } from '@chakra-ui/react';
 
 import { TaskList } from './components/TaskList';
 import { EmptyState } from './components/EmptyState';
@@ -37,6 +37,14 @@ export const InboxScreen = ({ error }) => {
   const editTitle = (title, id) => {
     dispatch({ type: 'EDIT_TITLE', id, title });
   };
+
+  if (tasks?.loading) {
+    return (
+      <Flex justify={"center"} align={"center"} minH={"100vh"}>
+        <Spinner size={'lg'} />
+      </Flex>
+    );
+  }
 
   if (error) {
     return (
