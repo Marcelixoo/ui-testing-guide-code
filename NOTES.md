@@ -22,6 +22,13 @@ Accessibility tests uncover usability issues related to visual, hearing, mobilit
 
 Walks the application through every step required for a user to complete a task, normally across multiple components.
 
+# e2e tests
+
+Comes with an extra cost.
+
+1. Maintain a full test environment, including front-end, back-end, services and seeded databases. One option is to use Docker to spin up the whole infrastructure and run the tests (used by O`Reilly’s team).
+2. Maintain a front-end only test environment. For instance, use Cypress to intercept and stub network requests (used by the Twilio team).
+
 - 📚 Isolate components using Storybook. Write test cases where each state is reproduced using props and mock data.
 - ✅ Catch visual bugs and verify composition using Chromatic.
 - 🐙 Verify interactions with Jest and Testing Library.
