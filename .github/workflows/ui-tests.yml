@@ -3,7 +3,7 @@ name: 'UI tests'
 on: push
 
 jobs:
-  interaction-and-accessibility
+  interaction-and-accessibility:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,7 +22,7 @@ jobs:
             "npx http-server storybook-static --port 6006 --silent" \
             "npx wait-on tcp:6006 && yarn test:storybook"
 
-  visual-and-composition
+  visual-and-composition:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -35,7 +35,7 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
 
-  user-flow
+  user-flow:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
