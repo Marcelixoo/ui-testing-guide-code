@@ -24,7 +24,8 @@ describe('The login page', () => {
       body: TaskListDefault.args,
     });
   })
-  it('allows a user to authenticate via the login form', () => {
+
+  it('authenticates users via the login form', () => {
     cy.visit('/');
 
     cy.get('input[name=email]').type(credentials.email);
