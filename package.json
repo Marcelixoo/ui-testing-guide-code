@@ -20,11 +20,11 @@
   "scripts": {
     "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
     "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
+    "build:storybook": "build-storybook",
     "test": "react-scripts test",
     "test:storybook": "test-storybook",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=787796f9a4ef",
     "cypress": "cypress open"
   },
